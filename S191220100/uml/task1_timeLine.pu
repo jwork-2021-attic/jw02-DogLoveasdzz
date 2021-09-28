@@ -1,0 +1,19 @@
+@startuml task1_timeline
+participant scene as scene
+actor geezer as geezer
+collections line as line
+control sorter as sorter
+
+scene -> line : put ONE
+scene -> line : put TWO
+scene -> line : put THREE
+scene -> line : put FOUR
+scene -> line : put FIVE
+scene -> line : put SIX
+scene -> line : put SEVEN
+scene -> geezer :sorter
+scene -> geezer :line
+geezer -> scene :log
+
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml task2_class
+
+interface Linable {
+    int getValue()
+    String toString()
+    void setValue()
+}
+
+interface Sorter {
+    void load()
+    void sort()
+    String getSortLog()
+}
+
+class Goblin{
+    int value
+}
+
+class LineLike{
+    Linable[] array
+    void setRandList()
+    {abstract}String toString()
+    int[] toArray()
+    void swap()
+}
+
+class Line
+
+class QuickSorter{
+    String log
+    int[] array
+}
+
+class SelectSorter{
+    String log
+    int[] array
+}
+
+class Snake{
+    Sorter sorter
+    Snake theSnake
+    void setSorter()
+    String lineUP()
+}
+
+QuickSorter --|> Sorter
+SelectSorter --|> Sorter
+Line --|> LineLike
+Goblin --|> Linable
+Snake --* Sorter
+LineLike --* Linable
+
+@enduml
